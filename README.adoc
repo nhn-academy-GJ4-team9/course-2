@@ -1,0 +1,17 @@
+= Course 2
+ * nhn 아카데미 광주 4기 9팀, link:https://math.hws.edu/javanotes/index.html[선택과정 2]
+
+= 학습내용
+
+[%header, cols="3, 5a"]
+|===
+^.>| 학습 일
+^.>| 내용
+
+^.^| 2023.10.17
+| Unit 2 Exercise 풀이
+
+^.^| 2023.10.18
+| Unit 2 Exercise 리뷰 및 Unit 3 Exercise 풀이
+
+|===
