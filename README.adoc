@@ -14,4 +14,7 @@
 ^.^| 2023.10.18
 | Unit 2 Exercise 리뷰 및 Unit 3 Exercise 풀이
 
+^.^| 2023.10.20
+| Unit 3 Exercise 리뷰 및 Unit 4 Exercise 풀이
+
 |===
