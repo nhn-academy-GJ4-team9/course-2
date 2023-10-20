@@ -15,7 +15,7 @@ public class Exercise6 {
         Mosaic.setUse3DEffect(false);
         Mosaic.open(ROWS, COLUMNS, SQUARE_SIZE, SQUARE_SIZE);
         fillWithBlack();
-        currentRow = ROWS / 2; // start at center of window
+        currentRow = ROWS / 2;
         currentColumn = COLUMNS / 2;
         while (true) {
             changeToGradientGreenColor(currentRow, currentColumn);
