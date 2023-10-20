@@ -16,7 +16,7 @@ public class Ex7_2 {
             int birthday;
             birthday = (int) (Math.random() * 365);
             count++;
-            System.out.printf("Person %d has birthday number %d%n", count, birthday + 1);
+            System.out.printf("Person %d has birthday number %d%n", count, birthday);
 
             if (count == 365) {
                 break;
