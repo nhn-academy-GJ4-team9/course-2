@@ -1,0 +1,70 @@
+= Programming Exercises for Chapter 9
+
+* Exercise 9.1:
+** Write recursive functions to compute `factorial(N)` and `fibonacci(N)` for a given non-negative integer N, and write a `main()` routine to test your functions.
+** Consider using the `BigInteger` class
+
+    factorial(0)  =  1
+    factorial(N)  =  N*factorial(N-1)   for N > 0
+
+    fibonacci(0)  =  1
+    fibonacci(1)  =  1
+    fibonacci(N)  =  fibonacci(N-1) + fibonacci(N-2)   for N > 1
+
+---
+
+* Exercise 9.2:
+** Write a new version of the same program that stores the words in a binary sort tree instead of in an arraylist. 
+** You can use the binary sort tree routines from `SortTreeDemo.java`, which was discussed in `Subsection 9.4.2`.
+
+---
+
+* Exercise 9.3:
+** Write a subroutine that will make a copy of a list, with the order of the items of the list reversed. The subroutine should have a parameter of type `ListNode`, and it should return a value of type `ListNode`. The original list should not be modified.
+
+[source, java]
+----
+class ListNode {
+   int item;       // An item in the list.
+   ListNode next;  // Pointer to the next node in the list.
+}
+----
+
+---
+
+* Exercise 9.4:
+**Write a subroutine that implements this algorithm, and write a program to test the subroutine. Note that you will need a queue of `TreeNodes`, so you will need to write a class to represent such queues.
+
+    Add the root node to an empty queue
+    while the queue is not empty:
+    Get a node from the queue
+    Print the item in the node
+    if node.left is not null:
+        add it to the queue
+    if node.right is not null:
+        add it to the queue
+
+---
+
+* Exercise 9.5:
+** ou should create a random binary sort tree with 1023 nodes. The items in the tree can be real numbers, and you can create the tree by generating 1023 random real numbers and inserting them into the tree, using the usual `treeInsert()` method for binary sort trees. Once you have the tree, you should compute and output the average depth of all the leaves in the tree and the maximum depth of all the leaves.
+
+---
+
+* Exercise 9.6:
+** Make a new version of the sample program `SimpleParser3.java` that can work with such expressions. In your program, the `main()` routine can't simply print the value of the expression, since the value of the expression now depends on the value of `x`. Instead, it should print the value of the expression for `x=0, x=1, x=2, and x=3`.
+** The original program will have to be modified in several other ways. Currently, the program uses classes `ConstNode`, `BinOpNode`, and `UnaryMinusNode` to represent nodes in an expression tree. Since expressions can now include x, you will need a new class, VariableNode, to represent an occurrence of `x` in the expression.
+** In the original program, each of the node classes has an instance method, `double value()`, which returns the value of the node. But in your program, the value can depend on x, so you should replace this method with one of the form `double value(double xValue)`, where the parameter xValue is the value of `x`.
+
+---
+
+* Exercise 9.7:
+** you should modify your program from the previous exercise so that it can compute the derivative of an expression. You can do this by adding a derivative-computing method to each of the node classes. First, add another abstract method to the ExpNode class
+** Then implement this method in each of the four subclasses of ExpNode. All the information that you need is in the rules given above. In your main program, instead of printing the stack operations for the original expression, you should print out the stack operations that define the derivative. Note that the formula that you get for the derivative can be much more complicated than it needs to be.
+*** The derivative of a constant is 0.
+*** The derivative of x is 1.
+*** If A is an expression, let dA be the derivative of A. Then the derivative of -A is -dA.
+*** If A and B are expressions, let dA be the derivative of A and let dB be the derivative of B. Then the derivative of A+B is dA+dB.
+*** The derivative of A-B is dA-dB.
+*** The derivative of A*B is A*dB + B*dA.
+*** The derivative of A/B is (B*dA - A*dB) / (B*B).
